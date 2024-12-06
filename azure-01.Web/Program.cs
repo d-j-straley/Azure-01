@@ -4,7 +4,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddInMemoryWpmDb();
+// Note that we're going to upgrade this to use Azure SQL Database later
+builder.Services.AddInMemoryWpmDb(); // Use the in-memory database for now
+
 
 var app = builder.Build();
 
